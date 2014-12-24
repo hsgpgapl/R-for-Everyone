@@ -42,3 +42,20 @@ list5[[length(list5)+1]] <- 2
 list5[["NewElement"]] <- 3:6
 names(list5)
 
+A
+B
+C
+
+nrow(A)
+ncol(A)
+dim(A)
+
+A+B
+A*B
+A==B
+A %*% t(B)
+colnames(A)
+rownames(A)
+colnames(A) <- c("Left", "Right")
+rownames(A) <- c("1st", "2nd", "3rd", "4th", "5th")
+

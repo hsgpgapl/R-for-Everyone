@@ -17,3 +17,28 @@ class(theDF[["Sport"]])
 theDF[,"Sport", drop = FALSE]
 class(theDF[,"Sport", drop = FALSE])
 summary(theDF) 
+newFactor <- factor(c("Pennsylvania","New York","New Jersey","New York","Tennessee","Massachusetts","Pennsylvania","New York"))
+model.matrix(~newFactor - 1)
+
+list(1,2,3)
+list(c(1,1,2,3))
+(list3 <- list(c(1,2,3), 3:7))
+list(theDF, 1:10)
+list5 <- list(theDF, 1:10, list3)
+list5
+names(list5)
+names(list5)<- c("data.frame","vector","list")
+list6 <- list(TheDataFrame=theDF, TheVector=1:10, TheList=list3)
+names(list6)
+list(6)
+
+(emptyList <- vector(mode = "list", length=4))
+list5[[1]]
+list5[["data.frame"]]
+list5[[1]]$Sport
+list5[[1]] [,"Second"]
+length(list5)
+list5[[length(list5)+1]] <- 2
+list5[["NewElement"]] <- 3:6
+names(list5)
+

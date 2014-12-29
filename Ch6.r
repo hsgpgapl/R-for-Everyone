@@ -17,6 +17,8 @@ n<- 20
 r <- 1:20
 w <- data.frame(n,r)
 n
+r
+w
 
 save(n, r, w, file = "data/multiple.rdata")
 rm(n, r, w)

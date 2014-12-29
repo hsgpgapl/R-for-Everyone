@@ -31,5 +31,5 @@ hello.person <- function(first, last="Doe"){
 	print(sprintf("Hello %s %s", first, last))
 }
 
-hello.person("Jared")
+hello.person("Jared") 
 

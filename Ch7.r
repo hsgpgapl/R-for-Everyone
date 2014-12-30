@@ -28,4 +28,8 @@ ggplot(diamonds, aes(y = carat, x = cut)) + geom_violin() + geom_point()
 ggplot(economics, aes(x=date, y = pop)) + geom_line()
 require(lubridate)
 economics$year <- year(economics$date)
-economics$month <- month(economics$date)
+economics$month <- month(economics$date, label=TRUE)
+econ2000 <- economics[which(economics$year > 2000),]
+require(scales)
+g<- ggplot(econ2000, aes(x=month, y=pop))
+

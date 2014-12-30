@@ -30,13 +30,6 @@ ggplot(economics, aes(x=date, y = pop)) + geom_line()
 
 require(lubridate)
 economics$year <- year(economics$date)
-<<<<<<< HEAD
-economics$month <- month(economics$date, label=TRUE)
-econ2000 <- economics[which(economics$year > 2000),]
-require(scales)
-g<- ggplot(econ2000, aes(x=month, y=pop))
-
-=======
 economics$month <- month(economics$date)
 econ2000 <- economics[which(economics$year >= 2000), ]
 
@@ -58,4 +51,3 @@ g2 + theme_economist() + scale_colour_economist()
 g2 + theme_excel() + scale_colour_excel()
 g2 + theme_tufte()
 g2 + theme_wsj()
->>>>>>> 0e2defbd2c67943aa3b203968547106df1b3b6af

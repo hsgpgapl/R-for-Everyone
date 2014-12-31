@@ -1,11 +1,15 @@
 ## Ch8.r
 
+# 8.1	Hello, World!
+
 say.hello <- function()
 {
 	print("Hello, World!")
 }
   
 say.hello()
+
+# 8.2	Function Arguments
 
 sprintf("Hello %s", "Jared")
 sprintf("Hello %s today is %s", "Jared", "Sunday")
@@ -30,6 +34,8 @@ hello.person("Jared",last="Lander")
 hello.person(last="Lander", "Jared")
 hello.person(fir="Jared",l="Lander")
 
+# 8.2.1	Default Arguments
+
 hello.person <- function(first, last="Doe")
 {
 	print(sprintf("Hello %s %s", first, last))
@@ -37,6 +43,8 @@ hello.person <- function(first, last="Doe")
 
 hello.person("Jared") 
 
+
+# 8.2.2	Extra Arguments
 
 hello.person("Jared", extra = "Goodbye")
 hello.person("Jared", "Lander", "Goodbye")
@@ -49,6 +57,8 @@ hello.person <- function(first, last="Doe", ...)
 hello.person("Jared", extra = "Goodbye")
 hello.person("Jared", "Lander", "Goodbye")
 
+
+# 8.3	Return Values
 
 double.num  <- function(x)
 {
@@ -64,6 +74,9 @@ double.num  <- function(x)
 }
 
 double.num(5)
+
+# 8.4	do.call
+
 
 do.call("hello.person", args = list(first = "Jared", last = "Lander"))
 
